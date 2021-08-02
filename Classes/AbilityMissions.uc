@@ -549,12 +549,12 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 		{
 			if (M1Inv.AVRiLAmityActive && !Inv.AVRiLAmityComplete)
 			{
-				if (DamageType == class'DEKWeapons208AD.DamTypeDEKAVRiLRocket')
+				if (DamageType == class'DEKWeapons208AE.DamTypeDEKAVRiLRocket')
 					M1Inv.MissionCount++;
 			}
 			else if (M1Inv.BioBerserkActive && !Inv.BioBerserkComplete)
 			{
-				if (DamageType == class'XWeapons.DamTypeBioGlob' || DamageType == class'DEKWeapons208AD.DamTypeUpgradeBioGlob')
+				if (DamageType == class'XWeapons.DamTypeBioGlob' || DamageType == class'DEKWeapons208AE.DamTypeUpgradeBioGlob')
 					M1Inv.MissionCount++;
 			}
 			else if (M1Inv.FlakFrenzyActive && !Inv.FlakFrenzyComplete)
@@ -601,9 +601,9 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 			}
 			else if (M1Inv.UtilityMutilityActive && !Inv.UtilityMutilityComplete)
 			{
-				if (DamageType == class'DEKWeapons208AD.DamTypeProAssBullet' || DamageType == class'DEKWeapons208AD.DamTypeProAssGrenadeChunk')
+				if (DamageType == class'DEKWeapons208AE.DamTypeProAssBullet' || DamageType == class'DEKWeapons208AE.DamTypeProAssGrenadeChunk')
 					M1Inv.MissionCount++;
-				else if (DamageType == class'DEKWeapons208AD.DamTypeProAssGrenade')
+				else if (DamageType == class'DEKWeapons208AE.DamTypeProAssGrenade')
 				{
 					M1Inv.MissionCount++;
 					M1Inv.MissionCount++;
@@ -615,12 +615,12 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 		{
 			if (M2Inv.AVRiLAmityActive && !Inv.AVRiLAmityComplete)
 			{
-				if (DamageType == class'DEKWeapons208AD.DamTypeDEKAVRiLRocket')
+				if (DamageType == class'DEKWeapons208AE.DamTypeDEKAVRiLRocket')
 					M2Inv.MissionCount++;
 			}
 			else if (M2Inv.BioBerserkActive && !Inv.BioBerserkComplete)
 			{
-				if (DamageType == class'XWeapons.DamTypeBioGlob' || DamageType == class'DEKWeapons208AD.DamTypeUpgradeBioGlob')
+				if (DamageType == class'XWeapons.DamTypeBioGlob' || DamageType == class'DEKWeapons208AE.DamTypeUpgradeBioGlob')
 					M2Inv.MissionCount++;
 			}
 			else if (M2Inv.FlakFrenzyActive && !Inv.FlakFrenzyComplete)
@@ -667,9 +667,9 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 			}
 			else if (M2Inv.UtilityMutilityActive && !Inv.UtilityMutilityComplete)
 			{
-				if (DamageType == class'DEKWeapons208AD.DamTypeProAssBullet' || DamageType == class'DEKWeapons208AD.DamTypeProAssGrenadeChunk')
+				if (DamageType == class'DEKWeapons208AE.DamTypeProAssBullet' || DamageType == class'DEKWeapons208AE.DamTypeProAssGrenadeChunk')
 					M2Inv.MissionCount++;
-				else if (DamageType == class'DEKWeapons208AD.DamTypeProAssGrenade')
+				else if (DamageType == class'DEKWeapons208AE.DamTypeProAssGrenade')
 				{
 					M2Inv.MissionCount++;
 					M2Inv.MissionCount++;
@@ -681,12 +681,12 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 		{
 			if (M3Inv.AVRiLAmityActive && !Inv.AVRiLAmityComplete)
 			{
-				if (DamageType == class'DEKWeapons208AD.DamTypeDEKAVRiLRocket')
+				if (DamageType == class'DEKWeapons208AE.DamTypeDEKAVRiLRocket')
 					M3Inv.MissionCount++;
 			}
 			else if (M3Inv.BioBerserkActive && !Inv.BioBerserkComplete)
 			{
-				if (DamageType == class'XWeapons.DamTypeBioGlob' || DamageType == class'DEKWeapons208AD.DamTypeUpgradeBioGlob')
+				if (DamageType == class'XWeapons.DamTypeBioGlob' || DamageType == class'DEKWeapons208AE.DamTypeUpgradeBioGlob')
 					M3Inv.MissionCount++;
 			}
 			else if (M3Inv.FlakFrenzyActive && !Inv.FlakFrenzyComplete)
@@ -733,9 +733,9 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 			}
 			else if (M3Inv.UtilityMutilityActive && !Inv.UtilityMutilityComplete)
 			{
-				if (DamageType == class'DEKWeapons208AD.DamTypeProAssBullet' || DamageType == class'DEKWeapons208AD.DamTypeProAssGrenadeChunk')
+				if (DamageType == class'DEKWeapons208AE.DamTypeProAssBullet' || DamageType == class'DEKWeapons208AE.DamTypeProAssGrenadeChunk')
 					M3Inv.MissionCount++;
-				else if (DamageType == class'DEKWeapons208AD.DamTypeProAssGrenade')
+				else if (DamageType == class'DEKWeapons208AE.DamTypeProAssGrenade')
 				{
 					M3Inv.MissionCount++;
 					M3Inv.MissionCount++;
@@ -814,41 +814,41 @@ defaultproperties
      NullifyFireDamageChance=10.000000
      NullifyEarthDamageChance=10.000000
      GenomeMaxDamage=30
-     BoneMonsters(0)=Class'DEKMonsters208AD.NecroMortalSkeleton'
-     BoneMonsters(1)=Class'DEKMonsters208AD.NecroSkull'
-     GhostMonsters(0)=Class'DEKMonsters208AD.NecroAdrenWraith'
-     GhostMonsters(1)=Class'DEKMonsters208AD.NecroGhostExp'
-     GhostMonsters(2)=Class'DEKMonsters208AD.NecroGhostIllusion'
-     GhostMonsters(3)=Class'DEKMonsters208AD.NecroGhostMisfortune'
-     GhostMonsters(4)=Class'DEKMonsters208AD.NecroGhostPoltergeist'
-     GhostMonsters(5)=Class'DEKMonsters208AD.NecroGhostPossessor'
-     GhostMonsters(6)=Class'DEKMonsters208AD.NecroGhostPriest'
-     GhostMonsters(7)=Class'DEKMonsters208AD.NecroGhostShaman'
-     GhostMonsters(8)=Class'DEKMonsters208AD.NecroPhantom'
-     GhostMonsters(9)=Class'DEKMonsters208AD.NecroSorcerer'
-     GhostMonsters(10)=Class'DEKMonsters208AD.NecroSoulWraith'
-     TechMonsters(0)=Class'DEKMonsters208AD.TechBehemoth'
-     TechMonsters(1)=Class'DEKMonsters208AD.TechKrall'
-     TechMonsters(2)=Class'DEKMonsters208AD.TechPupae'
-     TechMonsters(3)=Class'DEKMonsters208AD.TechQueen'
-     TechMonsters(4)=Class'DEKMonsters208AD.TechRazorfly'
-     TechMonsters(5)=Class'DEKMonsters208AD.TechSkaarj'
-     TechMonsters(6)=Class'DEKMonsters208AD.TechSlith'
-     TechMonsters(7)=Class'DEKMonsters208AD.TechSlug'
-     TechMonsters(8)=Class'DEKMonsters208AD.TechSniper'
-     TechMonsters(9)=Class'DEKMonsters208AD.TechTitan'
-     TechMonsters(10)=Class'DEKMonsters208AD.TechWarlord'
-     TechMonsters(11)=Class'DEKMonsters208AD.GiantManta'
-     TechMonsters(12)=Class'DEKBossMonsters208AD.MinionTechKrall'
-     TechMonsters(13)=Class'DEKBossMonsters208AD.MinionTechSniper'
-     CosmicMonsters(0)=Class'DEKMonsters208AD.CosmicBrute'
-     CosmicMonsters(1)=Class'DEKMonsters208AD.CosmicKrall'
-     CosmicMonsters(2)=Class'DEKMonsters208AD.CosmicMercenary'
-     CosmicMonsters(3)=Class'DEKMonsters208AD.CosmicNali'
-     CosmicMonsters(4)=Class'DEKMonsters208AD.CosmicQueen'
-     CosmicMonsters(5)=Class'DEKMonsters208AD.CosmicSkaarj'
-     CosmicMonsters(6)=Class'DEKMonsters208AD.CosmicTitan'
-     CosmicMonsters(7)=Class'DEKMonsters208AD.CosmicWarlord'
+     BoneMonsters(0)=Class'DEKMonsters208AE.NecroMortalSkeleton'
+     BoneMonsters(1)=Class'DEKMonsters208AE.NecroSkull'
+     GhostMonsters(0)=Class'DEKMonsters208AE.NecroAdrenWraith'
+     GhostMonsters(1)=Class'DEKMonsters208AE.NecroGhostExp'
+     GhostMonsters(2)=Class'DEKMonsters208AE.NecroGhostIllusion'
+     GhostMonsters(3)=Class'DEKMonsters208AE.NecroGhostMisfortune'
+     GhostMonsters(4)=Class'DEKMonsters208AE.NecroGhostPoltergeist'
+     GhostMonsters(5)=Class'DEKMonsters208AE.NecroGhostPossessor'
+     GhostMonsters(6)=Class'DEKMonsters208AE.NecroGhostPriest'
+     GhostMonsters(7)=Class'DEKMonsters208AE.NecroGhostShaman'
+     GhostMonsters(8)=Class'DEKMonsters208AE.NecroPhantom'
+     GhostMonsters(9)=Class'DEKMonsters208AE.NecroSorcerer'
+     GhostMonsters(10)=Class'DEKMonsters208AE.NecroSoulWraith'
+     TechMonsters(0)=Class'DEKMonsters208AE.TechBehemoth'
+     TechMonsters(1)=Class'DEKMonsters208AE.TechKrall'
+     TechMonsters(2)=Class'DEKMonsters208AE.TechPupae'
+     TechMonsters(3)=Class'DEKMonsters208AE.TechQueen'
+     TechMonsters(4)=Class'DEKMonsters208AE.TechRazorfly'
+     TechMonsters(5)=Class'DEKMonsters208AE.TechSkaarj'
+     TechMonsters(6)=Class'DEKMonsters208AE.TechSlith'
+     TechMonsters(7)=Class'DEKMonsters208AE.TechSlug'
+     TechMonsters(8)=Class'DEKMonsters208AE.TechSniper'
+     TechMonsters(9)=Class'DEKMonsters208AE.TechTitan'
+     TechMonsters(10)=Class'DEKMonsters208AE.TechWarlord'
+     TechMonsters(11)=Class'DEKMonsters208AE.GiantManta'
+     TechMonsters(12)=Class'DEKBossMonsters208AE.MinionTechKrall'
+     TechMonsters(13)=Class'DEKBossMonsters208AE.MinionTechSniper'
+     CosmicMonsters(0)=Class'DEKMonsters208AE.CosmicBrute'
+     CosmicMonsters(1)=Class'DEKMonsters208AE.CosmicKrall'
+     CosmicMonsters(2)=Class'DEKMonsters208AE.CosmicMercenary'
+     CosmicMonsters(3)=Class'DEKMonsters208AE.CosmicNali'
+     CosmicMonsters(4)=Class'DEKMonsters208AE.CosmicQueen'
+     CosmicMonsters(5)=Class'DEKMonsters208AE.CosmicSkaarj'
+     CosmicMonsters(6)=Class'DEKMonsters208AE.CosmicTitan'
+     CosmicMonsters(7)=Class'DEKMonsters208AE.CosmicWarlord'
      AbilityName="Missions"
      Description="This ability tracks the kills and damage you make for mission purposes. Activating certain missions without this ability will not track data.||You can forfeit a mission any time by keybinding these commands:|'exitmissionone' to forfeit mission one;|'exitmissiontwo' to forfeit mission two;|'exitmissionthree' to forfeit mission three.|See the F12 menu for more info on keybinding instructions as well as a list of available missions and their descriptions.||Cost: 1."
      StartingCost=1
