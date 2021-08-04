@@ -68,7 +68,7 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 defaultproperties
 {
      RangeMultiplier=0.100000
-     RequiredAbilities(0)=Class'DEKRPG208AE.AbilityMonsterPoints'
+     RequiredAbilities(0)=Class'DEKRPG208AF.AbilityMonsterPoints'
      AbilityName="Possess"
      Description="Grants the Possess artifact, which turns a hostile monster into a friendly pet. The amount of adrenaline and monster points required varies with the monster's scoring value. Each level of this ability allows you to possess a higher scoring monster.||You must have at least level one of Monster Points before purchasing this skill.||Cost: 2,3,4,5..."
      StartingCost=2

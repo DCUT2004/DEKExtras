@@ -87,7 +87,7 @@ static function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     ExcludingAbilities(0)=Class'DEKExtras208AE.AbilityTrapShock'
+     ExcludingAbilities(0)=Class'DEKExtras208AF.AbilityTrapShock'
      AbilityName="Aerial Trap"
      Description="You are granted the Aerial Trap, which will allow you to lay traps. This anti-gravity trap will strike out at airbone targets within a small radius, regardless of whether the trap is acivated or not.||Each level after the first adds an additional deployable trap. You can not have Shock Trap at the same time as this ability.||Cost(per level): 5,7,9,11,13,15...||Note: You must reconnect for the extra mines to show up."
      StartingCost=10
