@@ -87,7 +87,7 @@ static function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     ExcludingAbilities(0)=Class'DEKExtras208AF.AbilityTrapFrost'
+     ExcludingAbilities(0)=Class'DEKExtras208AG.AbilityTrapFrost'
      AbilityName="Wildfire Trap"
      Description="You are granted the Wildfire Trap, which will allow you to lay traps. This trap does more damage to Ice monsters, and will also burn targets.||Each level after the first adds an additional deployable trap. You can not have Frost Trap at the same time as this ability.||Cost(per level): 5,7,9,11,13,15...||Note: You must reconnect for the extra mines to show up."
      StartingCost=10
