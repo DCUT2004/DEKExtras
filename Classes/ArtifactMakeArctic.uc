@@ -148,6 +148,6 @@ static function string GetLocalString(optional int Switch, optional PlayerReplic
 defaultproperties
 {
      CostPerSec=5
-     IconMaterial=Texture'DEKRPGTexturesMaster208K.Artifacts.ArcticWeaponMakerIcon'
+     IconMaterial=Texture'DEKRPGTexturesMaster209A.Artifacts.ArcticWeaponMakerIcon'
      ItemName="Arctic Enchanter"
 }
