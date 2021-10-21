@@ -27,8 +27,8 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 defaultproperties
 {
      ProtectionMultiplier=0.050000
-     ExcludingAbilities(0)=Class'DEKExtras209A.AbilityShieldFire'
-     ExcludingAbilities(1)=Class'DEKExtras209A.AbilityShieldIce'
+     ExcludingAbilities(0)=Class'DEKExtras209B.AbilityShieldFire'
+     ExcludingAbilities(1)=Class'DEKExtras209B.AbilityShieldIce'
      AbilityName="Shield: Earth"
      Description="Reduces damage from all elemental Earth monsters by 5% per level. You can not have more than one type of elemental shield at a time.|Cost (per level): 5,10,15,20..."
      StartingCost=5
