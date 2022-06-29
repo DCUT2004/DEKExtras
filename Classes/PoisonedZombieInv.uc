@@ -155,10 +155,8 @@ simulated function Destroyed()
 		if (C.Pawn != None && C.Pawn.Health > 0 && C.Pawn.IsA('PoisonedZombie'))
 		{
 			Zombie = PoisonedZombie(C.Pawn);
-			Log("Found zombie to destroy");
 			if (Zombie.ZombieInv == Self || Zombie.Necromancer == Instigator.Controller)
 			{
-				Log("Destroying Zombie");
 				Zombie.Died(Zombie.Controller, class'DamageType', Vect(0,0,0));
 			}
 			
@@ -171,5 +169,5 @@ simulated function Destroyed()
 
 defaultproperties
 {
-	MaxZombies=3
+	MaxZombies=2
 }

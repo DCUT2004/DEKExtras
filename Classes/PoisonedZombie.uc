@@ -63,6 +63,10 @@ simulated function Destroyed()
 defaultproperties
 {
 	 Health=200
-	 PoisonDamagePerLevel=5
+	 PoisonDamagePerLevel=3
      ClawDamage=10
+     GroundSpeed=510.000000
+     WaterSpeed=180.000000
+     AirSpeed=510.000000
+     JumpZ=210.000000
 }
