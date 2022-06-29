@@ -55,7 +55,7 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 defaultproperties
 {
      AbilityName="Poisoned Zombie"
-     Description="Summons up to three Poisoned Zombies. Attacks from a zombie will give a poison similar to the Plague ability to its target.||Each level of this ability increases the plague damage from a zombie.||Cost (per level): 5,10,15,20..."
+     Description="Summons up to two Poisoned Zombies. Attacks from a zombie will give a poison similar to the Plague ability to its target.||Each level of this ability increases the plague damage from a zombie by 3 per level.||Cost (per level): 5,10,15,20..."
      StartingCost=5
      CostAddPerLevel=5
      MaxLevel=10
