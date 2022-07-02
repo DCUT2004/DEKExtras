@@ -1,7 +1,11 @@
-class RW_SolarPower extends RW_SuperHeat
+class RW_SolarPower extends RW_EnhancedInfinity
    HideDropDown
    CacheExempt
    config(UT2004RPG);
+   
+var RPGRules RPGRules;
+var config int HeatLifespan;
+var config float FireOnIceDamageBonus;
 
 function PostBeginPlay()
 {
@@ -122,12 +126,98 @@ function AdjustTargetDamage(out int Damage, Actor Victim, Vector HitLocation, ou
 		}
 		
 	}
-	Super(RPGWeapon).AdjustTargetDamage(Damage, Victim, HitLocation, Momentum, DamageType);	
+}
+
+function Burn(Pawn P)
+{
+	local SuperHeatInv Inv;
+	local MagicShieldInv MInv;
+	local MissionInv MiInv;
+	local Mission1Inv M1Inv;
+	local Mission2Inv M2Inv;
+	local MIssion3Inv M3Inv;
+	local FireInv FInv;
+	
+	MInv = MagicShieldInv(P.FindInventoryType(class'MagicShieldInv'));
+	MiInv = MissionInv(Instigator.FindInventoryType(class'MissionInv'));
+	M1Inv = Mission1Inv(Instigator.FindInventoryType(class'Mission1Inv'));
+	M2Inv = Mission2Inv(Instigator.FindInventoryType(class'Mission2Inv'));
+	M3Inv = Mission3Inv(Instigator.FindInventoryType(class'Mission3Inv'));
+   
+	if (P != None && P.Health > 0 && (!P.Controller.SameTeamAs(Instigator.Controller) || P == Instigator))
+	{
+		FInv = FireInv(P.FindInventoryType(class'FireInv'));
+		if (FInv != None)
+			return;
+		if (MInv != None)
+			return;
+		else
+		{
+			Inv = SuperHeatInv(P.FindInventoryType(class'SuperHeatInv'));
+			if (Inv == None)
+			{
+				Inv = spawn(class'SuperHeatInv', P,,, rot(0,0,0));
+				Inv.Modifier = Modifier;
+				Inv.LifeSpan = HeatLifespan;
+				Inv.RPGRules = RPGRules;
+				Inv.GiveTo(P);
+				if (Instigator != None && Instigator != P && MiInv != None && !MiInv.PyromancerComplete)
+				{
+					if (M1Inv != None && !M1Inv.Stopped && M1Inv.PyromancerActive)
+					{
+						if (Modifier <= 2)
+						{
+							M1Inv.MissionCount++;
+						}
+						else
+						{
+							M1Inv.MissionCount++;
+							M1Inv.MissionCount++;
+						}
+					}
+					if (M2Inv != None && !M2Inv.Stopped && M2Inv.PyromancerActive)
+					{
+						if (Modifier <= 2)
+						{
+							M2Inv.MissionCount++;
+						}
+						else
+						{
+							M2Inv.MissionCount++;
+							M2Inv.MissionCount++;
+						}
+					}
+					if (M3Inv != None && !M3Inv.Stopped && M3Inv.PyromancerActive)
+					{
+						if (Modifier <= 2)
+						{
+							M3Inv.MissionCount++;
+						}
+						else
+						{
+							M3Inv.MissionCount++;
+							M3Inv.MissionCount++;
+						}
+					}
+				}
+			}
+			else
+			{
+				Inv.Modifier = Modifier;
+				Inv.LifeSpan = HeatLifespan;
+			}
+		}
+		if (!bIdentified)
+			Identify();
+	}
 }
 
 defaultproperties
 {
 	 DamageBonus=0.04000000
+     HeatLifespan=4
+     FireOnIceDamageBonus=0.100000
+	 MinModifier=1
      MaxModifier=5
      PostfixPos=" of Solar Power"
      ModifierOverlay=TexPanner'Bastien_02.Lava.01B_PanLava'
