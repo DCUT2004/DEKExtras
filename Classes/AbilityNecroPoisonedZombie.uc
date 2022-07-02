@@ -2,12 +2,24 @@ class AbilityNecroPoisonedZombie extends CostRPGAbility
 	config(UT2004RPG)
 	abstract;
 	
+var config int PoisonMageLevel;
+	
 static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 {
 	local PoisonedZombieInv M;
+	local PlagueSpreader Inv;
+	local PoisonShieldInv PInv;
+	local ArtifactMakePoisonInfinity A;
 
 	if (Other.Role != ROLE_Authority || Other.Controller == None || !Other.Controller.bIsPlayer)
 		return;
+		
+	Inv = PlagueSpreader(Other.FindInventoryType(class'PlagueSpreader'));
+	if (Inv == None)
+	{
+		Inv = Other.Spawn(class'DEKRPG209E.PlagueSpreader', Other);
+		Inv.GiveTo(Other);
+	}
 
 
 	M = PoisonedZombieInv(Other.FindInventoryType(class'PoisonedZombieInv'));
@@ -23,6 +35,22 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 	M = Other.spawn(class'PoisonedZombieInv', Other,,,rot(0,0,0));
 	M.AbilityLevel = AbilityLevel;
 	M.GiveTo(Other);
+	
+	if (AbilityLevel >= default.PoisonMageLevel)
+	{
+		PInv = PoisonShieldInv(Other.FindInventoryType(class'PoisonShieldInv'));
+		A = ArtifactMakePoisonInfinity(Other.FindInventoryType(class'ArtifactMakePoisonInfinity'));
+		if (A == None)
+		{
+			A = Other.Spawn(class'ArtifactMakePoisonInfinity');
+			A.GiveTo(Other);
+		}
+		if (PInv == None)
+		{
+			PInv = Other.Spawn(class'PoisonShieldInv');
+			PInv.GiveTo(Other);
+		}
+	}
 }
 
 static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out vector Momentum, class<DamageType> DamageType, bool bOwnedByInstigator, int AbilityLevel)
@@ -54,8 +82,9 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 
 defaultproperties
 {
+     PoisonMageLevel=7
      AbilityName="Poisoned Zombie"
-     Description="Summons up to two Poisoned Zombies. Attacks from a zombie will give a poison similar to the Plague ability to its target.||Each level of this ability increases the plague damage from a zombie by 3 per level.||Cost (per level): 5,10,15,20..."
+     Description="Summons a Poisoned Zombie pet.||Attacks from a zombie will give a plague infection to its target. Enemies that come near the plague will become infected, and infected enemies can also infect other enemies.||You can also help spread the plague by standing near a plague cloud for several seconds. Once obtained, you can spread the plague by coming into contact with enemies.||Each level of this ability increases the plague damage from a zombie by 3 per level.||Cost (per level): 5,10,15,20..."
      StartingCost=5
      CostAddPerLevel=5
      MaxLevel=10
