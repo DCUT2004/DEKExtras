@@ -169,5 +169,5 @@ simulated function Destroyed()
 
 defaultproperties
 {
-	MaxZombies=2
+	MaxZombies=1
 }

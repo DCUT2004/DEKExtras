@@ -38,6 +38,8 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 	
 	if (AbilityLevel >= default.PoisonMageLevel)
 	{
+		if (M != None)
+			M.MaxZombies = M.default.MaxZombies + 1;
 		PInv = PoisonShieldInv(Other.FindInventoryType(class'PoisonShieldInv'));
 		A = ArtifactMakePoisonInfinity(Other.FindInventoryType(class'ArtifactMakePoisonInfinity'));
 		if (A == None)
@@ -84,7 +86,7 @@ defaultproperties
 {
      PoisonMageLevel=7
      AbilityName="Poisoned Zombie"
-     Description="Summons a Poisoned Zombie pet.||Attacks from a zombie will give a plague infection to its target. Enemies that come near the plague will become infected, and infected enemies can also infect other enemies.||You can also help spread the plague by standing near a plague cloud for several seconds. Once obtained, you can spread the plague by coming into contact with enemies.||Each level of this ability increases the plague damage from a zombie by 3 per level.||Cost (per level): 5,10,15,20..."
+     Description="Summons a Poisoned Zombie pet.||Attacks from a zombie will give a plague infection to its target. Enemies that come near the plague will become infected, and infected enemies can also infect other enemies.||You can also help spread the plague by standing near a plague cloud for several seconds. Once obtained, you can spread the plague by coming into contact with enemies.||Each level of this ability increases the plague damage from a zombie by 3 per level.||Poison Mage level 7 summons an extra zombie, provides you with resistance against poison ailments, and grants you a Poisoned Infinity maker.||Cost (per level): 5,10,15,20..."
      StartingCost=5
      CostAddPerLevel=5
      MaxLevel=10
