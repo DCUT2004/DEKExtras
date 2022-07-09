@@ -17,7 +17,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 	Inv = PlagueSpreader(Other.FindInventoryType(class'PlagueSpreader'));
 	if (Inv == None)
 	{
-		Inv = Other.Spawn(class'DEKRPG209E.PlagueSpreader', Other);
+		Inv = Other.Spawn(class'DEKRPG209F.PlagueSpreader', Other);
 		Inv.GiveTo(Other);
 	}
 
