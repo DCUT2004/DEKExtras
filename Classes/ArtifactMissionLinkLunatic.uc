@@ -5,7 +5,6 @@ defaultproperties
 {
 	 ObjectiveClasses(0)=Class'XWeapons.DamTypeLinkPlasma'
 	 ObjectiveClasses(1)=Class'XWeapons.DamTypeLinkShaft'
-	 TickAmount=1
      XPReward=30
      MissionGoal=500
      Description="Use the Link Gun."

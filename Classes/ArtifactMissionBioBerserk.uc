@@ -5,7 +5,6 @@ class ArtifactMissionBioBerserk extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'XWeapons.DamTypeBioGlob'
-	 TickAmount=1
      XPReward=30
      MissionGoal=300
      Description="Use the Bio Rifle."

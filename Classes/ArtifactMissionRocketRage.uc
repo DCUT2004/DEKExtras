@@ -5,7 +5,6 @@ defaultproperties
 {
 	 ObjectiveClasses(0)=Class'XWeapons.DamTypeRocket'
 	 ObjectiveClasses(1)=Class'XWeapons.DamTypeRocketHoming'
-	 TickAmount=1
      XPReward=30
      MissionGoal=300
      Description="Use the Rocket Launcher."

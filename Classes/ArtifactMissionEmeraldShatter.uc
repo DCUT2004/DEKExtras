@@ -5,7 +5,6 @@ defaultproperties
 {
 	 ObjectiveClasses(0)=Class'DEKMonsters999X.NecroGhostPossessor'
 	 ObjectiveClasses(1)=Class'DEKMonsters999X.NecroGhostPossessorMonsterInv'
-	 TickAmount=1
      XPReward=50
      MissionGoal=7
      Description="Kill monsters spawned by the emerald orb."

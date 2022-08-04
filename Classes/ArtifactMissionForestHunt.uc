@@ -4,7 +4,6 @@ class ArtifactMissionForestHunt extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'DEKRPG999X.EarthInv'
-	 TickAmount=1
      XPReward=50
      MissionGoal=15
      Description="Kill Earth monsters."

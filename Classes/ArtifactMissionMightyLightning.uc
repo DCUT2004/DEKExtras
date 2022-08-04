@@ -5,7 +5,6 @@ defaultproperties
 {
 	 ObjectiveClasses(0)=Class'XWeapons.DamTypeSniperShot'
 	 ObjectiveClasses(1)=Class'XWeapons.DamTypeSniperHeadShot'
-	 TickAmount=1
      XPReward=30
      MissionGoal=100
      Description="Use the Lightning Gun."

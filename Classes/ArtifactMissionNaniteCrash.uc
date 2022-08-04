@@ -4,7 +4,6 @@ class ArtifactMissionNaniteCrash extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'DEKRPG999X.TechInv'
-	 TickAmount=1
      XPReward=30
      MissionGoal=20
      Description="Kill Tech monsters."

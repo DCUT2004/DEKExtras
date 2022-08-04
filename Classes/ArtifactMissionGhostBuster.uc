@@ -14,7 +14,6 @@ defaultproperties
 	 ObjectiveClasses(8)=Class'DEKMonsters999X.NecroSoulWraith'
 	 ObjectiveClasses(9)=Class'DEKMonsters999X.NecroPhantom'
 	 ObjectiveClasses(10)=Class'DEKMonsters999X.NecroSorcerer'
-	 TickAmount=1
      XPReward=30
      MissionGoal=20
      Description="Kill Ghost monsters, including Ghost Nali."

@@ -4,7 +4,6 @@ class ArtifactMissionAVRiLAmity extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'DEKWeapons999X.DamTypeDEKAVRiLRocket'
-	 TickAmount=1
      XPReward=30
      MissionGoal=150
      Description="Use the AVRiL."

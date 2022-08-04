@@ -6,7 +6,6 @@ defaultproperties
 	 ObjectiveClasses(0)=Class'XWeapons.DamTypeShockBeam'
 	 ObjectiveClasses(1)=Class'XWeapons.DamTypeShockBall'
 	 ObjectiveClasses(2)=Class'XWeapons.DamTypeShockCombo'
-	 TickAmount=1
      XPReward=30
      MissionGoal=300
      Description="Use the Shock Rifle."

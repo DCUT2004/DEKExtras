@@ -4,7 +4,6 @@ class ArtifactMissionStarHunt extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'DEKRPG999X.CosmicInv'
-	 TickAmount=1
      XPReward=50
      MissionGoal=20
      Description="Kill Cosmic monsters."

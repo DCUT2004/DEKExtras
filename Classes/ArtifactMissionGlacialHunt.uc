@@ -4,7 +4,6 @@ class ArtifactMissionGlacialHunt extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'DEKRPG999X.IceInv'
-	 TickAmount=1
      XPReward=20
      MissionGoal=25
      Description="Kill Ice monsters."

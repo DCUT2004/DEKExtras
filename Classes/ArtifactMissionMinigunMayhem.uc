@@ -5,7 +5,6 @@ defaultproperties
 {
 	 ObjectiveClasses(0)=Class'XWeapons.DamTypeMinigunAlt'
 	 ObjectiveClasses(1)=Class'XWeapons.DamTypeMinigunBullet'
-	 TickAmount=1
      XPReward=30
      MissionGoal=900
      Description="Use the Minigun."

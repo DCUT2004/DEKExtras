@@ -4,7 +4,6 @@ class ArtifactMissionSkaarjHunt extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'Skaarjpack.Skaarj'
-	 TickAmount=1
      XPReward=50
      MissionGoal=30
      Description="Kill Skaarj, Troopers, and Snipers."

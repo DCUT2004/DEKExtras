@@ -4,7 +4,6 @@ class ArtifactMissionKrallHunt extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'Skaarjpack.Krall'
-	 TickAmount=1
      XPReward=50
      MissionGoal=20
      Description="Kill Krall."

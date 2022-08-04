@@ -4,7 +4,6 @@ class ArtifactMissionVolcanicHunt extends ArtifactMissionBETA
 defaultproperties
 {
 	 ObjectiveClasses(0)=Class'DEKRPG999X.FireInv'
-	 TickAmount=1
      XPReward=50
      MissionGoal=35
      Description="Kill Fire monsters."
