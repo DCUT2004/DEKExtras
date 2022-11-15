@@ -68,7 +68,7 @@ simulated function Activate()
 		return;	// really corrupt
 	}
 
-	if (LastUsedTime  + (TimeBetweenUses*AdrenalineUsage) > Instigator.Level.TimeSeconds)
+	if (LastUsedTime  + TimeBetweenUses > Instigator.Level.TimeSeconds)
 	{
 		Instigator.ReceiveLocalizedMessage(MessageClass, 5000, None, None, Class);
 		bActive = false;
@@ -144,7 +144,7 @@ simulated function Activate()
 					PointsRequired = default.MaxPoints;
 				if (AdrenalineRequired > Instigator.Controller.Adrenaline)
 				{
-					Instigator.ReceiveLocalizedMessage(MessageClass, AdrenalineRequired*AdrenalineUsage, None, None, Class);
+					Instigator.ReceiveLocalizedMessage(MessageClass, AdrenalineRequired, None, None, Class);
 					bActive = false;
 					GotoState('');
 					return;
@@ -181,7 +181,7 @@ simulated function Activate()
 						HitEmitter.mSpawnVecA = Mo.Location;
 					}
 					Instigator.PlaySound(Sound'XEffects.LightningSound', SLOT_None, 400.0);
-					SetRecoveryTime(TimeBetweenUses*AdrenalineUsage);
+					SetRecoveryTime(TimeBetweenUses);
 					Mo = None;
 					AdrenalineRequired = 0;
 					PointsRequired = 0;
@@ -209,7 +209,7 @@ simulated function Activate()
 				PointsRequired = default.MaxPoints;
 			if (AdrenalineRequired > Instigator.Controller.Adrenaline)
 			{
-				Instigator.ReceiveLocalizedMessage(MessageClass, AdrenalineRequired*AdrenalineUsage, None, None, Class);
+				Instigator.ReceiveLocalizedMessage(MessageClass, AdrenalineRequired, None, None, Class);
 				bActive = false;
 				GotoState('');
 				return;
@@ -245,7 +245,7 @@ simulated function Activate()
 				HitEmitter.mSpawnVecA = HitPawn.Location;
 			}
 			Instigator.PlaySound(Sound'XEffects.LightningSound', SLOT_None, 400.0);
-			SetRecoveryTime(TimeBetweenUses*AdrenalineUsage);
+			SetRecoveryTime(TimeBetweenUses);
 			Mo = None;
 			AdrenalineRequired = 0;
 			PointsRequired = 0;
